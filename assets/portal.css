@@ -1,0 +1,615 @@
+.recy-portal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgba(7, 5, 4, 0.99);
+  color: #ebd7c3;
+  font-family: inherit;
+}
+
+.recy-portal-page {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #4a3022;
+  border-radius: 18px;
+  background: #120c09;
+  box-shadow: 0 20px 80px #000;
+}
+
+.recy-portal-page h1,
+.recy-portal-page h2,
+.recy-portal-page h3 {
+  color: #d4a359;
+}
+
+.recy-portal-page h1 {
+  margin: 0 0 8px;
+  font-size: 1.45rem;
+}
+
+.recy-portal-page h2 {
+  margin: 22px 0 10px;
+  font-size: 1.1rem;
+}
+
+.recy-portal-page p {
+  line-height: 1.55;
+}
+
+.recy-portal-page button,
+.recy-portal-page input,
+.recy-portal-page select,
+.recy-portal-page textarea {
+  font: inherit;
+}
+
+.recy-portal-page button {
+  cursor: pointer;
+}
+
+.recy-portal-header,
+.recy-portal-row,
+.recy-portal-actions,
+.recy-portal-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.recy-portal-header {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #352319;
+  padding-bottom: 14px;
+}
+
+.recy-portal-actions,
+.recy-portal-tabs {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 12px 0;
+}
+
+.recy-portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 14px;
+}
+
+.recy-portal-card {
+  border: 1px solid #3b291d;
+  border-radius: 12px;
+  padding: 14px;
+  background: #1a110a;
+}
+
+.recy-point-admin-section {
+  margin-top: 20px;
+  border: 1px solid #4a3022;
+  border-radius: 14px;
+  padding: 16px;
+  background: #120c09;
+}
+
+.recy-point-admin-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: #d4a359;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.recy-point-admin-heading h2 {
+  margin: 0;
+  font-size: inherit;
+}
+
+.recy-portal-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  border: 1px dashed #5a4935;
+  border-radius: 10px;
+  padding: 16px;
+  color: #ebd7c399;
+  text-align: center;
+}
+
+.recy-portal-field {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+  color: #d4a359;
+  font-size: 0.9rem;
+}
+
+.recy-portal-field input,
+.recy-portal-field select,
+.recy-portal-field textarea {
+  width: 100%;
+  border: 1px solid #4a3022;
+  border-radius: 8px;
+  padding: 10px;
+  background: #0b0705;
+  color: #ebd7c3;
+}
+
+.recy-portal-field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.recy-material-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recy-material-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #4a3022;
+  border-radius: 7px;
+  padding: 7px 9px;
+  background: #0b0705;
+  color: #ebd7c3;
+  cursor: pointer;
+  font-size: 0.78rem;
+}
+
+.recy-material-option:has(input:checked) {
+  border-color: #d4a359;
+  background: #d4a35920;
+}
+
+.recy-material-option input {
+  accent-color: #d4a359;
+}
+
+.recy-material-category-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.recy-material-category-controls input {
+  border: 1px solid #4a3022;
+  border-radius: 8px;
+  padding: 9px;
+  background: #0b0705;
+  color: #ebd7c3;
+}
+
+.recy-portal-button {
+  border: 1px solid #7f5a2e;
+  border-radius: 8px;
+  padding: 9px 13px;
+  background: #2b1b0d;
+  color: #f1d5a4;
+}
+
+.recy-portal-button:hover {
+  background: #442b13;
+}
+
+.recy-portal-button-primary {
+  background: #d4a359;
+  color: #160e06;
+  font-weight: 700;
+}
+
+.recy-portal-button-danger {
+  border-color: #7e3434;
+  color: #ffcaca;
+}
+
+.recy-portal-message {
+  margin: 12px 0;
+  border-left: 3px solid #d4a359;
+  padding: 9px 12px;
+  background: #21170e;
+}
+
+.recy-portal-message-error {
+  border-color: #e36f6f;
+  color: #ffd0d0;
+}
+
+.recy-portal-map {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border: 1px solid #5a4935;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0 90px, #a38b6230 91px 92px, transparent 93px 160px, #a38b6230 161px 162px, transparent 163px),
+    linear-gradient(90deg, transparent 49.8%, #ffffff30 50%, transparent 50.2%),
+    linear-gradient(transparent 49.8%, #ffffff30 50%, transparent 50.2%),
+    repeating-linear-gradient(0deg, #ffffff0b 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(90deg, #ffffff0b 0 1px, transparent 1px 30px),
+    #15100c;
+  cursor: crosshair;
+}
+
+.recy-portal-map::after {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 3px;
+  transform: rotate(-3deg);
+  background: #0ea5e955;
+  content: "";
+}
+
+.recy-portal-map-label {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 12px;
+  color: #ebd7c3aa;
+  font-size: 0.72rem;
+  pointer-events: none;
+}
+
+.recy-portal-marker {
+  position: absolute;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #f7d27a;
+  border-radius: 50%;
+  background: #d4a359;
+  box-shadow: 0 0 7px 4px #d4a35999, 0 0 22px 9px #d4a35955;
+  cursor: pointer;
+}
+
+.recy-portal-marker-uefs {
+  border-color: #8af0b2;
+  background: #3bce7d;
+  box-shadow: 0 0 7px 4px #3bce7d99, 0 0 22px 9px #3bce7d55;
+}
+
+.recy-main-map-dragging {
+  cursor: grabbing !important;
+}
+
+.recy-main-map-dragging > .marker {
+  transition: none !important;
+}
+
+.recy-main-uefs-marker {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #b8ffd0;
+  border-radius: 50%;
+  background: #3bce7d;
+  box-shadow: 0 0 8px 4px #3bce7d99, 0 0 22px 9px #3bce7d55;
+  color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.recy-main-uefs-marker::after {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  border: 1px solid #8af0b2;
+  border-radius: 6px;
+  padding: 4px 7px;
+  background: #100b08ed;
+  color: #b8ffd0;
+  content: "UEFS";
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.recy-uefs-map-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #5a4935;
+  border-radius: 14px;
+  padding: 8px;
+  background:
+    repeating-linear-gradient(0deg, #ffffff08 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(90deg, #ffffff08 0 1px, transparent 1px 30px),
+    #15100c;
+  box-shadow: inset 0 0 24px #d4a35912, 0 8px 26px #0008;
+}
+
+.recy-uefs-campus-map {
+  position: relative;
+  height: min(60vh, 600px);
+  min-height: 340px;
+  border: 1px solid #5a4935;
+  border-radius: 9px;
+  background: #15100c;
+  cursor: grab;
+  touch-action: none;
+}
+
+.recy-uefs-campus-map.recy-uefs-map-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.recy-uefs-campus-map::after {
+  display: none;
+}
+
+.recy-uefs-map-content > svg {
+  display: block;
+  width: 1000px;
+  height: 600px;
+  pointer-events: none;
+}
+
+.recy-uefs-map-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 600px;
+  transform: translate3d(
+      calc(-50% + var(--uefs-map-pan-x, 0px)),
+      calc(-50% + var(--uefs-map-pan-y, 0px)),
+      0
+    )
+    scale(var(--uefs-map-zoom, 1));
+  transform-origin: center;
+  transition: transform 180ms ease-out;
+  will-change: transform;
+}
+
+.recy-uefs-map-dragging .recy-uefs-map-content {
+  transition: none;
+}
+
+.recy-uefs-map-controls {
+  position: absolute;
+  z-index: 1001;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #5a4935;
+  border-radius: 8px;
+  padding: 5px;
+  background: #100b08ed;
+  box-shadow: 0 3px 12px #0009;
+}
+
+.recy-uefs-zoom-button,
+.recy-uefs-zoom-reset {
+  min-width: 32px;
+  min-height: 32px;
+  border: 1px solid #7f5a2e;
+  border-radius: 5px;
+  background: #2b1b0d;
+  color: #f1d5a4;
+  font: inherit;
+  font-weight: 700;
+}
+
+.recy-uefs-zoom-reset {
+  min-width: 48px;
+  padding: 0 6px;
+  font-size: 0.72rem;
+}
+
+.recy-uefs-zoom-level {
+  min-width: 42px;
+  color: #ebd7c3;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.recy-uefs-zoom-button:hover:not(:disabled),
+.recy-uefs-zoom-reset:hover:not(:disabled) {
+  background: #442b13;
+}
+
+.recy-uefs-zoom-button:disabled,
+.recy-uefs-zoom-reset:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.recy-uefs-zoom-button:focus-visible,
+.recy-uefs-zoom-reset:focus-visible {
+  outline: 2px solid #8af0b2;
+  outline-offset: 2px;
+}
+
+.recy-uefs-map-label {
+  top: 16px;
+  left: 62px;
+  z-index: 1000;
+  border: 1px solid #5a4935;
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: #100b08e8;
+  color: #d4a359;
+  letter-spacing: 0.06em;
+}
+
+.recy-uefs-custom-marker {
+  z-index: 4;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+}
+
+.recy-uefs-custom-marker-primary {
+  width: 22px;
+  height: 22px;
+}
+
+.recy-uefs-admin-map {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  cursor: crosshair;
+  touch-action: manipulation;
+}
+
+.recy-uefs-admin-map::after {
+  display: none;
+}
+
+.recy-uefs-admin-map .recy-uefs-map-content {
+  inset: 0;
+  top: auto;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  transition: none;
+}
+
+.recy-uefs-admin-map .recy-uefs-map-content > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.recy-uefs-custom-marker-primary::after {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: max-content;
+  transform: translateY(-50%);
+  border: 1px solid #8af0b2;
+  border-radius: 6px;
+  padding: 4px 7px;
+  background: #100b08ed;
+  box-shadow: 0 2px 8px #0009;
+  color: #b8ffd0;
+  content: attr(data-label);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.recy-uefs-custom-marker:hover {
+  scale: 1.18;
+}
+
+.recy-uefs-custom-marker[aria-pressed="true"] {
+  border-color: #fff3cd;
+  box-shadow: 0 0 9px 5px #3bce7daa, 0 0 26px 12px #3bce7d66;
+}
+
+.recy-uefs-custom-marker:focus-visible {
+  outline: 3px solid #fff3cd;
+  outline-offset: 4px;
+}
+
+.recy-uefs-point-details {
+  margin: 14px 0;
+}
+
+.recy-uefs-point-details h3 {
+  margin-top: 0;
+}
+
+.recy-uefs-campus-map + .recy-portal-legend {
+  color: #ebd7c3aa;
+}
+
+.recy-uefs-attribution-link {
+  position: absolute;
+  z-index: 1000;
+  bottom: 8px;
+  left: 12px;
+  border: 1px solid #5a4935;
+  border-radius: 5px;
+  padding: 3px 6px;
+  background: #100b08e8;
+  color: #d4a359;
+  font-size: 0.65rem;
+  text-decoration: none;
+}
+
+.recy-uefs-attribution-link:hover {
+  color: #f1d5a4;
+  text-decoration: underline;
+}
+
+.recy-portal-marker-selection {
+  border-color: #fff;
+  background: #fff;
+  box-shadow: 0 0 9px 5px #ffffffbb, 0 0 25px 11px #ffffff66;
+  pointer-events: none;
+}
+
+.recy-portal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 10px 0;
+  color: #ebd7c3aa;
+  font-size: 0.8rem;
+}
+
+.recy-portal-muted {
+  color: #ebd7c399;
+}
+
+.recy-portal-nav-button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: rgb(255 255 255 / 70%);
+  text-align: left;
+}
+
+.recy-portal-nav-button:hover {
+  background: rgb(255 255 255 / 7%);
+  color: #d4a359;
+}
+
+@media (max-width: 600px) {
+  .recy-portal-backdrop {
+    padding: 8px;
+  }
+
+  .recy-portal-page {
+    padding: 14px;
+  }
+
+  .recy-point-admin-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recy-portal-header {
+    align-items: flex-start;
+  }
+
+  .recy-uefs-custom-marker-primary::after {
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+
+}
