@@ -158,7 +158,7 @@ async function request(path, { method = "GET", body, token } = {}) {
     });
   } catch (error) {
     if (error.name === "AbortError") {
-      throw new Error("O serviço demorou para responder. Verifique a conexão e tente novamente.");
+      throw new Error("O serviço demorou para responder. Verifique a conexão e tente novamente");
     }
     throw error;
   } finally {
